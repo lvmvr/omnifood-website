@@ -11,4 +11,17 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
+
+	/* basic styling for all children of html doc */ 
+html {
+	background-color: #fff;
+	color: #555;
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	/* Renders the text nicer - look up later */
+	text-rendering: optimizeLegibility;
+}
+
