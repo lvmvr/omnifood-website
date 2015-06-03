@@ -1,12 +1,8 @@
-/*
-		     				
-
-		     				Omnifood website - FPO v1 with CSS3 styles only. 
-
+/*		     				
+	
+	OMNIFOOD LANDING PAGE - v1 with CSS3 styles only. 
 
 */
-
-
 
 * {
 	margin: 0;
@@ -14,14 +10,138 @@
 	box-sizing: border-box;
 }
 
-	/* basic styling for all children of html doc */ 
+/*  Basic styling 
+	============================================================= */ 
 html {
 	background-color: #fff;
 	color: #555;
 	font-family: 'Lato', 'Arial', sans-serif;
 	font-size: 20px;
 	font-weight: 300;
-	/* Renders the text nicer - look up later */
+	/* Renders text clean */
 	text-rendering: optimizeLegibility;
 }
+
+.row {
+	max-width: 1140px;  /* fixed width for all rows */
+	margin: 0 auto; /* center content*/
+}
+
+
+h1 {
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 2.2em;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	word-spacing: 4px;
+}
+
+/* Button Normal State 
+   ====================================*/
+.btn:link, 
+.btn:visited {
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: 300px;
+	text-decoration: none;
+	border-radius: 200px;
+	border: 2px solid #e67e22;
+	/* Transition the background, color, border by 0.2s*/
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+	background-color: #e67e22;
+	color: #fff;
+	margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+	color: #e67e22;
+}
+
+
+/* Button Hover state, and clicked state
+   ========================================*/
+.btn:hover,
+.btn:active {
+	background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+	border: 2px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	color: #fff;
+	border: 2px solid #cf6d17;
+}
+
+
+/* Header styles
+   ==========================================*/
+header {
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh; /* 100% of the viewport's height */
+}
+
+.hero-text {
+	position: absolute; /* We want to vertically & horizontally center content */
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* Centers content half of width and height up to the top and left*/
+}
+
+
+/* Logo & Navigation
+   ================================*/
+.logo {
+	height:100px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+
+.main-nav {
+	float: right;
+	list-style: none;
+	margin-top: 55px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+	padding: 8px 0;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	border-bottom: 2px solid transparent; /* We want border exist before hover, but not yet visible.*/
+	transition: border-bottom 0.2s;
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active {
+	border-bottom: 2px solid #e67e22; /* Visible on hover */
+}
+
+
+
+
+
+
 
