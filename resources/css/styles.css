@@ -22,20 +22,132 @@ html {
 	text-rendering: optimizeLegibility;
 }
 
+/* Clearfix hack
+   ===================================================*/
+.clearfix{ zoom: 1 }
+.clearfix:after {
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
 .row {
 	max-width: 1140px;  /* fixed width for all rows */
 	margin: 0 auto; /* center content*/
 }
 
+section {
+	padding: 80px 0px;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
 
 h1 {
 	margin-bottom: 20px;
 	color: #fff;
 	font-size: 2.2em;
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 1px;
 	word-spacing: 4px;
+	letter-spacing: 1px;
+}
+
+h2 {
+	font-size: 1.8em;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;/* Note: h2 and h2:after have same 30px value for margins for symmetry*/
+	letter-spacing: 1px; 
+}
+
+/* Line divide (yellow)
+   ==================================*/
+h2:after {
+	display: block;
+	height: 2px;
+	background-color: #e67e22;
+	content: ""; /* Must have when using :after pseudo-class */
+	width: 100px;
+	margin: 0 auto; /* Center content */
+	margin-top: 30px;
+
+}
+
+h3 {
+	font-size: 1.125em; /* Eh. */
+	margin-bottom: 15px;
+}
+
+/* Copy
+   ===================================*/
+.long-copy {
+	line-height: 1.5;
+	width: 70%;
+	margin-left: 15%; /* centers content using remainder 30% evenly */
+	margin-right: 15%;
+	text-align: center; /* Adjusts it nicely in the center*/
+}
+
+.features .long-copy {
+	margin-bottom: 30px;
+}
+
+.box {
+	padding: 1%;
+}
+
+.box p {
+	font-size: 0.9em;
+	line-height: 1.45;
+
+}
+
+/* Links
+   ===================================*/
+a:link,
+a:visited {
+	color: #e67e22;
+	text-decoration: none;
+	border-bottom: 1px solid #e67e22;
+	padding-bottom: 1px;
+	transition: border-bottom 0.2s, color 0.2s
+}
+
+a:hover,
+a:active {
+	color: #555;
+	border-bottom: 1px solid transparent;
+}
+
+
+
+/* Icons
+   ===================================*/
+.icon-big {
+	font-size: 3.5em;
+	display: block;
+	color: #e67e22;
+	margin-bottom: 10px;
+	margin-right: 25px; 
+	text-align: center;
+}
+
+.icon-small {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	color: #e67e22;
+	font-size: 1.2em;
+	margin-right: 10px;
+	/* Align texts and icons trick */
+	line-height: 1.2;
+	vertical-align: middle;
+	margin-top: -4px;
 }
 
 /* Button Normal State 
@@ -140,8 +252,109 @@ header {
 }
 
 
+ /* Meals showcase 
+    =================================*/
+.meals-showcase {
+	list-style: none;
+	width: 100%; /* Will fill 100% of browser, not of the 1140px, no row class*/
+
+}
+
+.meals-showcase li {
+	display: block;
+	float: left;
+	width: 25%; /* 4 images per row/ ul element */
+
+}
+
+.meal-photo {
+	width: 100%; /* redundant line, only bottom code needed...try removing after add transitions */
+	overflow: hidden; /* Keeps images contained */
+	background-color: #000; /* for darker img */
+}
+
+.meal-photo img {
+	opacity: 0.7; /* can you use linear gradient instead? try this with header too. */
+	width: 100%;
+	height: auto;
+	transform: scale(1.16); /* 116% bigger i think... */
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+	transform: scale(1.1); /* back to normal*/
+	opacity: 1; /* back to normal*/
+}
+
+.meals {
+	padding: 0;
+}
 
 
+/* How it works
+   ====================================*/
+.steps {
+	background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+	text-align: right; /* Works for inline-block elements */
+	padding-right: 3%; /* layout will be fluid */
+	margin-top: 30px;
+}
+
+.steps-box:last-child {
+	padding-left: 3%;
+	margin-top: 70px;
+}
+
+.app-screen {
+	width: 40%;
+}
+
+.works-steps {
+	margin-bottom: 50px;
+}
+
+.works-steps:last-of-type{ /* Gives step 3 more margin bottom unlike sibling elements with 50px */
+	margin-bottom: 80px;
+}
+
+.works-steps div {
+	color: #e67e22;
+	border: 2px solid #e67e22;
+	display: inline-block; /* will not enforce line break */
+	border-radius: 50%;
+	height: 55px;
+	width: 55px;
+	text-align: center;
+	padding: 5px;
+	float: left; /* We used clearfix on meals section to fix issue of clearing floats */
+	font-size: 1.5em;
+	margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited
+ { border: 0; }
+
+.btn-app img {
+	height: 50px;
+	width: auto;
+	margin-right: 15px;
+}
+
+/* Cities
+   ===========================================*/
+.box img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
+
+.city-features{
+	margin-bottom: 5px;
+}
 
 
 
