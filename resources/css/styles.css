@@ -363,6 +363,38 @@ header {
 	background-attachment: fixed; /* Parallax effect bitches */
 }
 
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	line-height: 1.5;
+	position: relative;
+	margin-top: 30px;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 4.5em;
+	display: block;
+	position: absolute;
+	top: -60px;
+	left: -3px;
+}
+
+cite {
+	font-size: 0.9em;
+	font-style: normal;
+	font-weight: 300;
+	margin-top: 25px;
+	display: block;
+}
+
+cite img {
+	height: 45px;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
 
 
 
