@@ -91,9 +91,6 @@ h3 {
 	margin-left: 15%; /* centers content using remainder 30% evenly */
 	margin-right: 15%;
 	text-align: center; /* Adjusts it nicely in the center*/
-}
-
-.features .long-copy {
 	margin-bottom: 30px;
 }
 
@@ -203,6 +200,7 @@ header {
 	background-size: cover;
 	background-position: center;
 	height: 100vh; /* 100% of the viewport's height */
+	background-attachment: fixed;
 }
 
 .hero-text {
@@ -355,6 +353,16 @@ header {
 .city-features{
 	margin-bottom: 5px;
 }
+
+/* Testimonials
+   ===========================================*/
+.testimonials {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+	background-size: cover;
+	color: #fff;
+	background-attachment: fixed; /* Parallax effect bitches */
+}
+
 
 
 
