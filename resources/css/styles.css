@@ -10,6 +10,8 @@
 	box-sizing: border-box;
 }
 
+*:focus { outline: none; }
+
 /*  Basic styling 
 	============================================================= */ 
 html {
@@ -38,9 +40,7 @@ html {
 	margin: 0 auto; /* center content*/
 }
 
-section {
-	padding: 80px 0px;
-}
+section { padding: 80px 0px; }
 
 h1,
 h2,
@@ -94,9 +94,7 @@ h3 {
 	margin-bottom: 30px;
 }
 
-.box {
-	padding: 1%;
-}
+.box { padding: 1%; }
 
 .box p {
 	font-size: 0.9em;
@@ -150,10 +148,12 @@ a:active {
 /* Button Normal State 
    ====================================*/
 .btn:link, 
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
 	display: inline-block;
 	padding: 10px 30px;
-	font-weight: 300px;
+	font-size: inherit;
+	font-weight: 300;
 	text-decoration: none;
 	border-radius: 200px;
 	border: 2px solid #e67e22;
@@ -162,29 +162,28 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type="submit"] {
 	background-color: #e67e22;
 	color: #fff;
 	margin-right: 15px;
 }
 
 .btn-ghost:link,
-.btn-ghost:visited {
-	color: #e67e22;
-}
+.btn-ghost:visited { color: #e67e22; }
 
 
 /* Button Hover state, and clicked state
    ========================================*/
 .btn:hover,
-.btn:active {
-	background-color: #cf6d17;
-}
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active { background-color: #cf6d17; }
 
 .btn-full:hover,
-.btn-full:active {
-	border: 2px solid #cf6d17;
-}
+.btn-full:active,
+input[type="submit"]:hover,
+input[type="submit"]:active { border: 2px solid #cf6d17; }
 
 .btn-ghost:hover,
 .btn-ghost:active {
@@ -284,9 +283,7 @@ header {
 	opacity: 1; /* back to normal*/
 }
 
-.meals {
-	padding: 0;
-}
+.meals { padding: 0; }
 
 
 /* How it works
@@ -306,13 +303,9 @@ header {
 	margin-top: 70px;
 }
 
-.app-screen {
-	width: 40%;
-}
+.app-screen { width: 40%; }
 
-.works-steps {
-	margin-bottom: 50px;
-}
+.works-steps { margin-bottom: 50px; }
 
 .works-steps:last-of-type{ /* Gives step 3 more margin bottom unlike sibling elements with 50px */
 	margin-bottom: 80px;
@@ -333,8 +326,7 @@ header {
 }
 
 .btn-app:link,
-.btn-app:visited
- { border: 0; }
+.btn-app:visited { border: 0; }
 
 .btn-app img {
 	height: 50px;
@@ -350,9 +342,7 @@ header {
 	margin-bottom: 15px;
 }
 
-.city-features{
-	margin-bottom: 5px;
-}
+.city-features { margin-bottom: 5px; }
 
 /* Testimonials
    ===========================================*/
@@ -397,9 +387,7 @@ cite img {
 
 /* Sign Up
    ===========================================*/
-.plans {
-	background-color: #f4f4f4;
-}
+.plans { background-color: #f4f4f4; }
 
 .plan-box{
 	background-color: #fff;
@@ -428,10 +416,7 @@ cite img {
 	font-weight: 300;
 }
 
-.plan-price .plan-meal {
-	font-size: 0.8em;
-	
-}
+.plan-price .plan-meal { font-size: 0.8em; }
 
 .planbox div:first-child {
 	background-color: #fcfcfc;
@@ -444,21 +429,40 @@ cite img {
 	border-bottom: none;
 }
 
-.plan-box ul {
-	list-style: none;
+.plan-box ul { list-style: none; }
+
+.plan-box ul li { padding: 5px 0; }
+
+/* Form
+   ===========================================*/
+.section-form {
+	width: 60%;
+	margin: 0 auto;
 }
 
-.plan-box ul li {
-	padding: 5px 0;
+input[placeholder],
+input[type="submit"], /* had to repeat this style for some reason, works now */
+textarea[placeholder],
+select
+{
+	font-family: inherit;
+	font-size: 0.9em;
+	font-weight: 300;
+}
 
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+	width: 100%;
+	padding: 7px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
 }
 
 
+textarea { height: 100px; }
 
-
-
-
-
-
+input[type="checkbox"] { margin: 10px 5px 10px 0; }
 
 
