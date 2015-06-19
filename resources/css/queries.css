@@ -1,0 +1,150 @@
+/*
+*
+*			Media Queries for Responsive Web Design - basic 
+*/
+
+/* Big tablet - 1024px - 1200px
+*****************************************/
+
+@media only screen and (max-width: 1200px) {
+	.hero-text{
+		width: 100%;
+		padding: 0 2%;
+	}
+	.row { padding: 0 2%; }
+}
+
+
+
+/* Tablets - 768px - 1023px
+*****************************************/
+
+@media only screen and (max-width: 1023px) {
+	body {
+		font-size: 18px;
+	}
+	section {
+		padding: 60px 0;
+	}
+	.long-copy {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.steps-box {
+		margin-top: 10px;
+	}
+	.steps-box:last-child {
+		margin-top: 10px;
+	}
+	.works-steps {
+		margin-bottom: 40px;
+	}
+	.works-steps:last-of-type {
+		margin-bottom: 80px;
+	}
+	.app-screen {
+		width: 50%;
+	}
+	.icon-small {
+		width: 17px;
+		margin-right: 5px;
+	}
+	.city-features {
+		font-size: 0.85em;
+	}
+	.plan-box {
+		width: 100%;
+		margin-left: 0%;
+	}
+	.plan-price {
+		font-size: 2.5em;
+	}
+	.section-form {
+		width: 80%;
+	}
+	.social-icons,
+	.footer-nav {
+		float: none;
+		text-align: center;
+	}
+	.footer-nav {
+		margin-bottom: 10px;
+	}
+}
+
+
+/* Small phones/ tablets - 481px - 767px
+*****************************************/
+
+@media only screen and (max-width: 767px) {
+	body{
+		font-size: 16px;
+	}
+	section {
+		padding: 30px 0;
+	}
+	.row,
+	.hero-text {
+		padding: 0 4%;
+	}
+	.col {
+		width: 100%;
+		margin: 0 0 4% 0;
+	}
+
+	.main-nav {
+		display: none;
+	}
+
+	.long-copy {
+		width: 100%;
+		margin-left: 0%;
+	}
+	h1 {
+		font-size: 1.8em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	.steps-box:first-child {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.steps-box:last-child {
+		margin-top: 20px;
+	}
+	.works-steps {
+		margin-bottom: 30px;
+	}
+	.works-steps div {
+		height: 40px;
+		width: 40px;
+		margin-right: 15px;
+		padding: 4px;
+		font-size: 1.2em;
+	}
+	.works-steps:last-of-type {
+		margin-bottom: 30px;
+	}
+	.app-screen {
+		width: 40%;
+	}
+	input[type="submit"] {
+		width: 100%;
+	}
+}
+
+
+/* Small phones - Less than or equal to 480px
+*********************************************/
+
+@media only screen and (max-width: 480px) {
+	section {
+		padding: 25px 0;
+	}
+	.section-form {
+		width: 100%;
+	}
+}
