@@ -14,7 +14,8 @@
 
 /*  Basic styling 
 	============================================================= */ 
-html {
+html,
+body {
 	background-color: #fff;
 	color: #555;
 	font-family: 'Lato', 'Arial', sans-serif;
@@ -22,6 +23,7 @@ html {
 	font-weight: 300;
 	/* Renders text clean */
 	text-rendering: optimizeLegibility;
+	overflow-x: hidden; /* when media 500px or less, text overflows screen */
 }
 
 /* Clearfix hack
@@ -207,7 +209,8 @@ header {
 	width: 1140px;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%); /* Centers content half of width and height up to the top and left*/
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%); /* Centers content half of width and height up to the top and left*/
 }
 
 
@@ -274,12 +277,15 @@ header {
 	opacity: 0.7; /* can you use linear gradient instead? try this with header too. */
 	width: 100%;
 	height: auto;
-	transform: scale(1.16); /* 116% bigger i think... */
+	-webkit-transform: scale(1.16);
+	        transform: scale(1.16); /* 116% bigger i think... */
+	transition: -webkit-transform 0.5s, opacity 0.5s;
 	transition: transform 0.5s, opacity 0.5s;
 }
 
 .meal-photo img:hover {
-	transform: scale(1.1); /* back to normal*/
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1); /* back to normal*/
 	opacity: 1; /* back to normal*/
 }
 
