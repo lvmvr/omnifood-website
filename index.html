@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="vendors/css/node_modules/normalize.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="resources/css/styles.css">
@@ -21,23 +22,23 @@
 				<img src="resources/img/logo-white.png" alt="Omnifood Logo" class="logo">
 				<img src="resources/img/logo.png" alt="Omnifood Logo" class="logo-black">
 				<ul class="main-nav">
-					<li><a href="#">Food delivery</a></li>
-					<li><a href="#">How it works</a></li>
-					<li><a href="#">Our locations</a></li>
-					<li><a href="#">Sign up</a></li>
+					<li><a href="#features">Food delivery</a></li>
+					<li><a href="#works">How it works</a></li>
+					<li><a href="#cities">Our locations</a></li>
+					<li><a href="#plans">Sign up</a></li>
 				</ul>
 			</div>
 		</nav>
 		<div class="hero-text">
 			<h1>Goodbye junkfood,<br> Hello super healthy meals.</h1>
-			<a class="btn btn-full" href="#">I'm hungry</a>
-			<a class="btn btn-ghost" href="#">Show me more</a>
+			<a class="btn btn-full js--scroll-to-plans" href="#">I'm hungry</a>
+			<a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
 		</div>
 	</header>
 	
 	<!-- Features section -->
 	
-	<section class="features js--features"> <!-- Use for sticky nav activation --> 
+	<section class="features js--features" id="features"> <!-- Use for sticky nav activation --> 
 		<div class="row">
 			<h2>Get food fast &mdash; not fast food</h2> <!-- Longer dash + only use one h1, so using h2 -->
 			<p class="long-copy">
@@ -45,7 +46,7 @@
 			</p>
 		</div>
 		<!-- Grid using col -->
-		<div class="row">
+		<div class="row js--wp-1">
 			<div class="col span-1-of-4 box">
 				<!-- Adding icons -->
 				<i class="ion-ios-calendar-outline icon-big"></i>
@@ -124,13 +125,13 @@
 	
 	<!-- How it works section -->
 
-	<section class="steps">
+	<section class="steps" id="works">
 		<div class="row">
 			<h2>How it works &mdash; Simple as 1, 2, 3</h2>
 		</div>
 		<div class="row"> <!-- col for iphone, col for steps, all in same row -->
 			<div class="col span-1-of-2 steps-box">
-				<img src="resources/img/app-iphone.png" alt="Omnifood app on iPhone" class="app-screen">
+				<img src="resources/img/app-iphone.png" alt="Omnifood app on iPhone" class="app-screen js--wp-2">
 			</div>
 			<div class="col span-1-of-2 steps-box">
 				<div class="works-steps">
@@ -157,11 +158,11 @@
 	
 	<!-- Cities section-->
 
-	<section class="cities">
+	<section class="cities" id="cities">
 		<div class="row">
 			<h2>We're currently in these cities</h2>
 		</div>
-		<div class="row">
+		<div class="row js--wp-3">
 			<div class="col span-1-of-4 box">
 				<img src="resources/img/lisbon-3.jpg" alt="Lisbon">
 				<h3>Lisbon</h3>
@@ -258,13 +259,13 @@
 
 	<!-- Plans section -->
 	
-	<section class="plans">
+	<section class="plans js--section-plans" id="plans">
 		<div class="row">
 			<h2>Start eating healthy today</h2>
 		</div>
 		<div class="row">
 			<div class="col span-1-of-3">
-				<div class="plan-box">
+				<div class="plan-box js--wp-4">
 					<div> <!-- Monthly price -->
 						<h3>Premium</h3>
 						<p class="plan-price">$399 <span>/ month</span></p>
