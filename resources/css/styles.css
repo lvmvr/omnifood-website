@@ -216,11 +216,19 @@ header {
 
 /* Logo & Navigation section
    ================================*/
-.logo {
+.logo{
 	height:100px;
 	width: auto;
 	float: left;
 	margin-top: 20px;
+}
+
+.logo-black {
+	height: 50px;
+	width: auto;
+	float: left;
+	margin: 5px 0;
+	display: none; /* Not visible in normal state*/
 }
 
 .main-nav {
@@ -249,6 +257,34 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
 	border-bottom: 2px solid #e67e22; /* Visible on hover */
+}
+
+/* Sticky Navigation */
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.98);
+	box-shadow: 0 1px 2px #efefef;
+	z-index: 1;
+}
+
+.sticky .main-nav {
+	margin-top: 18px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+	padding: 16px 0;
+	color: #555;
+}
+
+.sticky .logo {
+	display: none;
+}
+.sticky .logo-black {
+	display: block;
 }
 
 
