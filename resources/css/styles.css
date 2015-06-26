@@ -289,6 +289,20 @@ header {
 	display: block;
 }
 
+/* Mobile Navigation
+   =================================*/
+.mobile-nav-icon {
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+.mobile-nav-icon i{
+	font-size: 2em;
+	color: #fff;
+}
+
 
  /* Meals showcase section 
     =================================*/

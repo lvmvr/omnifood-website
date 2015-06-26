@@ -1,6 +1,6 @@
 $(document).ready(function(){ 
 
-	/* Sticky Navigation */ 
+	/* Add/ Remove Sticky Navigation */ 
 
 	$('.js--features').waypoint(function(direction){
 		if (direction == "down") {
@@ -12,7 +12,7 @@ $(document).ready(function(){
 		offset: '60px;' 
 	});
 
-	/* Scroll to section */
+	/* Scroll to section on click event */
 
 	$('.js--scroll-to-plans').click(function(){
 		$('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1500);
@@ -22,7 +22,7 @@ $(document).ready(function(){
 		$('html, body').animate({scrollTop: $('.js--features').offset().top}, 1000);
 	});
 
-	/* Smooth Scrolling to elements */
+	/* CSS Tricks: Smooth Scrolling to elements with ID */
 
 	$(function() {
   		$('a[href*=#]:not([href=#])').click(function() {
@@ -39,7 +39,7 @@ $(document).ready(function(){
  		});
 	});
 
-	/* Animations on scroll */
+	/* Add Animations on scroll */
 
 	$('.js--wp-1').waypoint(function(direction) {
 		$('.js--wp-1').addClass('animated fadeIn');
@@ -62,11 +62,21 @@ $(document).ready(function(){
 		offset: '50%'
 	});
 
+	/* Mobile Navigation */
+	$('.js--nav-icon').click(function() {
+		var nav = $('.js--main-nav');
+		var icon = $('.js--nav-icon i')
 
-
-
-
-
+		nav.slideToggle(200);
+		/* switch from hamburger to cross icon */
+		if (icon.hasClass('ion-navicon-round')){
+			icon.addClass('ion-close-round');
+			icon.removeClass('ion-navicon-round');
+		} else {
+			icon.addClass('ion-navicon-round');
+			icon.removeClass('ion-close-round');
+		}
+	});
 });
 
 
