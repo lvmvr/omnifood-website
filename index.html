@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Omnifood is a fictitious premium food delivery service with the mission to bring affordable and healthy meals to as many people as possible.">
 	<link rel="stylesheet" type="text/css" href="vendors/css/node_modules/normalize.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
@@ -247,6 +248,7 @@
 					<blockquote>
 						Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
 					<cite><img src="resources/img/customer-2.jpg" alt="Joana Silva">Joana Silva</cite>
+					</blockquote>
 				</div>
 				<div class="col span-1-of-3">
 					<blockquote>
@@ -354,68 +356,74 @@
 
 	<!-- Form section -->
 
-	<section class="section-form">
-		<div class="row">
-			<h2>We're happy to hear from you</h2>
+	<div class="map-box">
+
+		<div class="map">
+			
 		</div>
-		<div class="row"> <!-- Look up forms/labels/inputs later with scripts -->
-			<form action="#" method="post" class="contact-form">
-				<div class="row">
-					<div class="col span-1-of-3">
-						<label for="name">Name</label>
+		<div class="form-box">
+			<div class="row">
+				<h2>We're happy to hear from you</h2>
+			</div>
+			<div class="row"> <!-- Look up forms/labels/inputs later with scripts -->
+				<form action="#" method="post" class="contact-form">
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label for="name">Name</label>
+						</div>
+						<div class="col span-2-of-3"> <!-- Google Chrome sees required-->
+							<input type="text" name="name" id="name" placeholder="Your name" class="name" required>
+						</div>
 					</div>
-					<div class="col span-2-of-3"> <!-- Google Chrome sees required-->
-						<input type="text" name="name" id="name" placeholder="Your name" class="name" required>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label for="email">Email</label>
+						</div>
+						<div class="col span-2-of-3"> <!-- Google Chrome sees required-->
+							<input type="email" name="email" id="email" placeholder="Your email" required>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col span-1-of-3">
-						<label for="email">Email</label>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label for="find-us">How did you find us?</label>
+						</div>
+						<div class="col span-2-of-3"> <!-- Google Chrome sees required-->
+							<select name="find-us" id="find-us"> <!-- dropdown -->
+								<option value="Friends" selected>Friends</option>
+								<option value="search-engine">Search Engine</option>
+								<option value="advertisement">Advertisement</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
 					</div>
-					<div class="col span-2-of-3"> <!-- Google Chrome sees required-->
-						<input type="email" name="email" id="email" placeholder="Your email" required>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label>Newsletter</label>
+						</div>
+						<div class="col span-2-of-3"> 
+							<input type="checkbox" name="news" id="news" checked>Yes please!
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col span-1-of-3">
-						<label for="find-us">How did you find us?</label>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label>Drop us a line</label>
+						</div>
+						<div class="col span-2-of-3"> 
+							<textarea name="message" placeholder="Your Message"></textarea>
+						</div>
 					</div>
-					<div class="col span-2-of-3"> <!-- Google Chrome sees required-->
-						<select name="find-us" id="find-us"> <!-- dropdown -->
-							<option value="Friends" selected>Friends</option>
-							<option value="search-engine">Search Engine</option>
-							<option value="advertisement">Advertisement</option>
-							<option value="other">Other</option>
-						</select>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label>&nbsp;</label>
+						</div>
+						<div class="col span-2-of-3"> 
+							<input type="submit" value="Send it">
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col span-1-of-3">
-						<label>Newsletter</label>
-					</div>
-					<div class="col span-2-of-3"> 
-						<input type="checkbox" name="news" id="news" checked>Yes please!
-					</div>
-				</div>
-				<div class="row">
-					<div class="col span-1-of-3">
-						<label>Drop us a line</label>
-					</div>
-					<div class="col span-2-of-3"> 
-						<textarea name="message" placeholder="Your Message"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col span-1-of-3">
-						<label>&nbsp;</label>
-					</div>
-					<div class="col span-2-of-3"> 
-						<input type="submit" value="Send it">
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
-	</section>
+	</div>
 
 	<!-- Footer section -->
 
@@ -460,5 +468,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="vendors/js/jquery.waypoints.min.js"></script>
 	<script src="resources/js/scripts.js"></script> <!-- Sticky nav -->
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="vendors/js/gmaps.js"></script>
 </body>
 </html>

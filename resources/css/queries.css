@@ -62,7 +62,7 @@
 		font-size: 2.5em;
 	}
 	.section-form {
-		width: 80%;
+		width: 90%;
 	}
 	.social-icons,
 	.footer-nav {
@@ -173,6 +173,26 @@
 	}
 	input[type="submit"] {
 		width: 100%;
+	}
+
+	.map-box {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+
+	.map {
+		width: 100%;
+		height: 300px;
+		position: relative;
+		z-index: 0;
+	}
+
+	.form-box {
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding: 30px 20px 0 30px;
 	}
 }
 
