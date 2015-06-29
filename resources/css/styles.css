@@ -197,7 +197,7 @@ input[type="submit"]:active { border: 2px solid #cf6d17; }
 /* Header styles
    ==========================================*/
 header {
-	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero-min.jpg);
 	background-size: cover;
 	background-position: center;
 	height: 100vh; /* 100% of the viewport's height */
@@ -405,7 +405,7 @@ header {
 /* Testimonials section
    ===========================================*/
 .testimonials {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
 	background-size: cover;
 	color: #fff;
 	background-attachment: fixed; /* Parallax effect bitches */
